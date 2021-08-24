@@ -18,7 +18,6 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="App">
-        <Header></Header>
           <Switch>
             <Route path="/login" component={Login} exact></Route>
             <Route path="/signup" component={Signup} exact></Route>

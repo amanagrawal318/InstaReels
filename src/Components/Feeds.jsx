@@ -6,7 +6,7 @@ import { firebaseDB,firebaseStorage,timeStamp } from "../config/firebase";
 import { uuid } from "uuidv4";
 import VideoPost from "./VideoPost";
 import { Link } from "react-router-dom";
-
+import Header from "./Header";
 const Feeds = (props) => {
   const {signOut} = useContext(AuthContext);
   const [videoFile,setVideoFile]=useState(null);
@@ -128,7 +128,10 @@ const Feeds = (props) => {
     console.log(postobj.pid);
   });*/
   return (
+    <>
+    <Header></Header>
     <div style={{margin:"5px"}}>
+
       
       {/*<button onClick={handleLogout}>Logout</button>*/}
       
@@ -159,6 +162,7 @@ const Feeds = (props) => {
         })}
       </div>
     </div>
+    </>
   );
 };
 
